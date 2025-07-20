@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ContFront/static/css/main.5e1fbf17.css",
+    "main.js": "/ContFront/static/js/main.872bcbba.js",
+    "static/media/Glimmer of Blooms - I Cant Get You Out Of My Head (LYRICS).mp3": "/ContFront/static/media/Glimmer of Blooms - I Cant Get You Out Of My Head (LYRICS).931f0dc6369c9cc76dd7.mp3",
+    "static/media/tas.jpg": "/ContFront/static/media/tas.ff2f832e944a8415af2c.jpg",
+    "index.html": "/ContFront/index.html",
+    "main.5e1fbf17.css.map": "/ContFront/static/css/main.5e1fbf17.css.map",
+    "main.872bcbba.js.map": "/ContFront/static/js/main.872bcbba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e1fbf17.css",
+    "static/js/main.872bcbba.js"
+  ]
+}
