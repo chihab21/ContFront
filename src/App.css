@@ -1,0 +1,437 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Root Variables */
+:root {
+  --primary-color: #e91e63;
+  --secondary-color: #f5a3a2;
+  --accent-color: #d9534f;
+  --bg-gradient: linear-gradient(135deg, #ffe0f0, #fff6fb);
+  --text-color: #4a0033;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --radius: 20px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #f0e6f6;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 420px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(229, 29, 94, 0.2);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Titles */
+h1, .confession-left h1 {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-shadow: 0 0 6px #ff66b3;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Paragraphs */
+p, .confession-left p {
+  line-height: 1.5;
+  color: #7a2a58;
+  font-size: 1.1rem;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff88bb;
+  box-shadow: 0 0 20px #f883ac88;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 1.8rem;
+  transition: background 0.3s ease, transform 0.2s;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 12px #e91e63cc;
+}
+
+.btn-primary:hover {
+  background: #c2185b;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  box-shadow: 0 3px 10px #b47bbd99;
+}
+
+.btn-secondary:hover {
+  background: #9c67b8;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Floating Hearts */
+.floating-hearts {
+  font-size: 1.5rem;
+  animation: floatHearts 3s infinite alternate;
+  margin-bottom: 1rem;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0); opacity: 0.7; }
+  100% { transform: translateY(-10px); opacity: 1; }
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease;
+  text-align: center;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Confession Section */
+.confession-bg {
+  background: var(--bg-gradient);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  color: #8e2c62;
+  text-align: center;
+}
+
+.confession-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.confession-left, .confession-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Quote style */
+.quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #9c1e67;
+  text-shadow: 0 0 8px #ff88bb;
+  margin-top: 1rem;
+}
+
+/* Text area */
+.text-area {
+  width: 100%;
+  border-radius: 10px;
+  border: 1.5px solid var(--primary-color);
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Dancing Script', cursive;
+  resize: vertical;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.text-area:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+/* Choices Buttons */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.yes, .no {
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.yes {
+  background-color: #4caf50;
+  color: white;
+}
+
+.yes:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.no {
+  background-color: #f44336;
+  color: white;
+}
+
+.no:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Envelope container */
+.envlope-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 380px;
+  user-select: none;
+  perspective: 1200px;
+  margin-top: 2rem;
+}
+
+/* Envelope */
+#envelope {
+  width: 280px;
+  height: 180px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.25);
+  border-radius: 12px;
+}
+
+/* Open envelope rotate */
+#envelope.open {
+  transform: rotateX(180deg);
+}
+
+/* Flap */
+.front.flap {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 90px solid var(--accent-color);
+  z-index: 3;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  transition: transform 0.6s ease-in-out;
+  backface-visibility: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+#envelope.open .front.flap {
+  transform: rotateX(180deg);
+}
+
+/* Pocket */
+.front.pocket {
+  position: absolute;
+  bottom: 0;
+  width: 280px;
+  height: 90px;
+  background: linear-gradient(135deg, #f5a3a2, #ff8fa3);
+  border-radius: 0 0 12px 12px;
+  z-index: 1;
+  box-shadow: inset 0 -3px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Letter */
+.letter {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  background: white;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.25rem;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  color: #5b2a4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Words inside letter */
+.words {
+  margin: 0.2rem 0;
+  font-weight: 500;
+}
+
+/* Hearts */
+.hearts {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 4;
+}
+
+.heart {
+  width: 18px;
+  height: 18px;
+  background: var(--primary-color);
+  clip-path: polygon(
+    50% 0%, 61% 10%, 75% 0%, 100% 25%,
+    85% 60%, 50% 100%, 15% 60%, 0% 25%,
+    25% 0%, 39% 10%
+  );
+  animation: pulse 1.6s infinite;
+  opacity: 0.85;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.85; }
+}
+
+/* Responsive */
+/* Responsive - Mobile Bigger and More Readable */
+@media (max-width: 480px) {
+  .container {
+    max-width: 90vw;        /* More width on mobile */
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;   /* More padding */
+    font-size: 1.2rem;      /* Bigger base font size */
+  }
+
+  h1, .confession-left h1 {
+    font-size: 2.5rem;      /* Bigger headings */
+  }
+
+  p, .confession-left p {
+    font-size: 1.3rem;      /* Bigger paragraph text */
+  }
+
+  .profile-img {
+    width: 160px;           /* Bigger profile image */
+    height: 160px;
+  }
+
+  .btn-primary, .btn-secondary {
+    font-size: 1.2rem;      /* Bigger buttons */
+    padding: 1rem 2.5rem;
+  }
+
+  #envelope {
+    width: 340px;           /* Bigger envelope */
+    height: 220px;
+  }
+
+  /* Button container tweaks */
+  .button-container {
+    gap: 18px;
+    margin-top: 1.5rem;
+  }
+
+  .button-container button {
+    flex: 1 1 100%;
+    max-width: none;        /* Full width on mobile */
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* Adjust space as needed */
+  margin-top: 1.5rem;
+}
+.bba{
+  margin-left: 25px;
+}.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* space between buttons */
+  margin-top: 1.5rem;
+  flex-wrap: wrap; /* allow buttons to wrap on small screens */
+}
+
+.bba {
+  margin-left: 25px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .button-container {
+    gap: 12px;
+    margin-top: 1rem;
+  }
+
+  .bba {
+    margin-left: 0; /* Remove left margin on mobile */
+  }
+
+  /* Make buttons full width and stacked on small screens */
+  .button-container button {
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+}
